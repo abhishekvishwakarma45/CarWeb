@@ -7,25 +7,25 @@ const features = [
     title: "Affordable Pricing",
     description:
       "No hidden fees, just honest and competitive pricing for every budget.",
-    image: "/6135586.webp",
+    image: "/discount.png",
   },
   {
     title: "Trusted Dealership",
     description:
       "Join thousands of happy drivers who trust us for quality and service.",
-    image: "/handshake-deal-svgrepo-com.svg",
+    image: "/car-dealer.png",
   },
   {
     title: "Transparent Deals",
     description:
       "Everything upfront—what you see is what you pay. No gimmicks, no surprises.",
-    image: "/4492512.webp",
+    image: "/contract.png",
   },
   {
     title: "Expert Maintenance",
     description:
       "Every car is inspected and tuned by certified technicians before it hits the lot.",
-    image: "/maintenance-electric-car-svgrepo-com.svg",
+    image: "/maintenance.png",
   },
 ];
 
@@ -36,7 +36,7 @@ const WhyChooseSection = () => {
   });
 
   return (
-    <section className="w-full px-6 my-20 bg-white">
+    <section className="w-full px-6 bg-white py-30">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>

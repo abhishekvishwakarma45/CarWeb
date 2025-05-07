@@ -6,7 +6,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import PriceFormatter from "./PriceFormatter";
 import { FiTag } from "react-icons/fi";
 import { PiEngine } from "react-icons/pi";
-import { BiTag } from "react-icons/bi";
+
+import { CiStar } from "react-icons/ci";
 
 const CarTemplate = ({ curr }) => {
   const { year, name, images, average, specifications, price } = curr;
@@ -24,7 +25,7 @@ const CarTemplate = ({ curr }) => {
             className="flex w-8 h-8 bg-white rounded-full justify-center items-center focus:outline-none"
             aria-label="Tag"
           >
-            <BiTag className="text-lg text-black" />
+            <CiStar className="text-xl text-black" />
           </button>
         </div>
       </div>

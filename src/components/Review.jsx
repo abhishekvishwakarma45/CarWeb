@@ -56,7 +56,7 @@ export default function Review() {
           {[...reviews, ...reviews].map((review, idx) => (
             <div
               key={idx}
-              className="w-full sm:w-64 md:w-72 lg:w-80 bg-white rounded-xl shadow-md p-6 my-4 shrink-0 flex flex-col h-full min-h-[250px]"
+              className="w-full sm:w-64 md:w-72 lg:w-80 bg-[#EBF7FE] rounded-xl shadow-md p-6 my-4 shrink-0 flex flex-col h-full min-h-auto"
             >
               <div className="flex h-auto justify-between items-center mb-4 border-b pb-2 border-gray-200">
                 <div className="font-semibold text-lg text-gray-900">
@@ -82,7 +82,7 @@ export default function Review() {
           {[...reviews, ...reviews].map((review, idx) => (
             <div
               key={idx}
-              className="w-full sm:w-64 md:w-72 lg:w-80 bg-white rounded-xl shadow-lg p-6 my-4 shrink-0 flex flex-col h-full min-h-[250px]"
+              className="w-full sm:w-64 md:w-72 lg:w-80 bg-[#EBF7FE] rounded-xl shadow-lg p-6 my-4 shrink-0 flex flex-col h-full min-h-auto"
             >
               <div className="flex h-auto justify-between items-center mb-4 border-b pb-2 border-gray-200">
                 <div className="font-semibold text-lg text-gray-900">

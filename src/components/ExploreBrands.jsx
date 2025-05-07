@@ -7,17 +7,17 @@ import "swiper/css/pagination";
 const ExploreBrands = () => {
   const brands = [
     { name: "BMW", img: "/Brands/bmw-logo-png_seeklogo-170616.png" },
-    { name: "Ford", img: "/Brands/ford-logo-png_seeklogo-56581.png" },
-    { name: "Honda", img: "/Brands/honda-silver-logo-png_seeklogo-289413.png" },
+    { name: "Land Rover", img: "/Brands/land-rover.png" },
+    { name: "Porshe", img: "/Brands/porshe.png" },
     {
-      name: "Hyundai",
-      img: "/Brands/hyundai-motor-company-logo-png_seeklogo-69075.png",
+      name: "Bugatti",
+      img: "/Brands/bugatti.png",
     },
     {
       name: "Mercedes-Benz",
       img: "/Brands/mercedes-benz-logo-png_seeklogo-91081.png",
     },
-    { name: "Suzuki", img: "/Brands/suzuki-logo-png_seeklogo-134277.png" },
+    { name: "Jaguar", img: "/Brands/jaguar.png" },
     { name: "Tesla", img: "/Brands/tesla-logo-png_seeklogo-329764.png" },
     { name: "Volvo", img: "/Brands/volvo-logo-png_seeklogo-150596.png" },
   ];

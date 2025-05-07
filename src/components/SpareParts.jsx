@@ -39,7 +39,7 @@ const Parts = () => {
 
       <hr className="text-gray-400 mb-8" />
 
-      <div className="flex flex-wrap justify-evenly items-center gap-6">
+      <div className="flex flex-wrap justify-center items-center gap-6">
         {part.map((item, index) => (
           <div
             key={index}

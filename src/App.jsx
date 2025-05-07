@@ -9,16 +9,18 @@ import { Footer } from "./components/Footer.jsx";
 import EmiCalculator from "./components/EMICalculator.jsx";
 import Review from "./components/Review.jsx";
 import Parts from "./components/SpareParts.jsx";
+import BrowseByType from "./components/BrowseByType.jsx";
+import Sale from "./components/Sale.jsx";
 
 function App() {
   return (
     <Fragment>
-      {/* <Header /> */}
-      {/* <EmiCalculator /> */}
+      {/* <Sale /> */}
+      <BrowseByType />
       <MostSearchedCar />
       <ExploreBrands />
-      <Review />
       <WhyChooseSection />
+      <Review />
       <Parts />
       <Footer />
     </Fragment>
