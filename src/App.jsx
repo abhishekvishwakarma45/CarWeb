@@ -15,10 +15,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import HeroSection from "./components/HeroSection.jsx";
-
+// import Header from "./components/Header.jsx";
 function App() {
   return (
     <Fragment>
+      <Header />
       <HeroSection />
       <BrowseByType />
       <MostSearchedCar />

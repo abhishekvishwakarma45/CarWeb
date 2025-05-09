@@ -41,7 +41,7 @@ const MostSearchedCar = () => {
     <section className="w-full px-4 sm:px-6 lg:px-20 my-20 bg-white">
       <div className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800">
-          Explore the Most Searched Vehicles
+          Top Searched Vehicles
         </h1>
 
         <div className="mt-10 flex justify-center flex-wrap gap-3">
@@ -71,7 +71,7 @@ const MostSearchedCar = () => {
           ))}
         </div>
       </div>
-
+      <hr className="text-gray-400" />
       <Swiper
         modules={[Navigation]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -84,7 +84,7 @@ const MostSearchedCar = () => {
       >
         {carChunks.map((group, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-wrap justify-center gap-6 mt-6 px-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6 px-2">
               {group.map((car, idx) => (
                 <CarTemplate key={idx} curr={car} />
               ))}

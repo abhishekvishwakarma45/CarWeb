@@ -1,54 +1,43 @@
 import React from "react";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { IoIosSearch } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
-import { FaUser } from "react-icons/fa6";
+import { VscAccount } from "react-icons/vsc";
 
 const Header = () => {
   return (
-    <div className="flex justify-around items-center w-full h-20 px-4 lg:px-8">
-      <div className="flex justify-start items-center w-1/3">
+    <header className="w-full px-6 py-4 absolute z-40 top-0 text-white bg-black/30 backdrop-blur-md flex justify-between items-center transition duration-300">
+      <div className="flex items-center">
         <img
-          className="object-contain h-16 lg:h-20"
           src="https://res.cloudinary.com/dqktbs8zx/image/upload/v1744024894/logo-removebg-preview_ctd0jf.png"
           alt="Logo"
+          className="h-12 w-auto object-contain"
         />
       </div>
-      <div className="hidden lg:flex items-center justify-center capitalise space-x-6 w-1/3">
-        <p className=" text-sm cursor-pointer">Home</p>
-        <p className=" text-sm cursor-pointer">Products</p>
-        <p className=" text-sm cursor-pointer">About</p>
-        <p className=" text-sm cursor-pointer">Contact</p>
-      </div>
 
-      <div className="flex items-center justify-end w-1/3 pr-2 space-x-4">
-        {/* <form className="items-center hidden lg:flex">
-          <div className="border flex items-center rounded-sm overflow-hidden">
-            <input
-              type="text"
-              name="search"
-              className="px-3 py-2 outline-none text-gray-700"
-              placeholder="Search anything..."
-            />
-            <button type="submit" className="px-4 py-2 text-2xl">
-              <IoIosSearch />
-            </button>
-          </div>
-        </form> */}
-
-        <div className="hidden lg:grid place-content-center border border-gray-500 py-2 px-3 rounded-4xl">
-          <button className="text-sm mx-1  text-black">
-            <p className="flex items-center">
-              <FaUser className="mx-2" /> Sign In
-            </p>
-          </button>
-        </div>
-
-        <button className="inline-block p-2 text-2xl font-bold lg:hidden">
-          <RiMenu3Fill />
+      <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-widest">
+        <span className="cursor-pointer hover:text-yellow-400 transition">
+          Home
+        </span>
+        <span className="cursor-pointer hover:text-yellow-400 transition">
+          Listing
+        </span>
+        <span className="cursor-pointer hover:text-yellow-400 transition">
+          Blog Pages
+        </span>
+        <span className="cursor-pointer hover:text-yellow-400 transition">
+          About
+        </span>
+        <span className="cursor-pointer hover:text-yellow-400 transition">
+          Contact
+        </span>
+        <button className="ml-4 px-5 py-2 flex justify-center items-center text-white rounded border border-white hover:bg-white hover:text-black transition-all duration-300">
+          <VscAccount className="mx-2" /> Sign In
         </button>
-      </div>
-    </div>
+      </nav>
+
+      <button className="md:hidden text-4xl text-white">
+        <RiMenu3Fill />
+      </button>
+    </header>
   );
 };
 

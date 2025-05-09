@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const rotatingWords = [
-  "Performance",
-  "Comfort",
-  "Elegance",
-  "Power",
-  "Precision",
-];
+const rotatingWords = ["Comfort", "Elegance", "Power", "Precision", "Thrill"];
 
 const HeroSection = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -36,19 +30,21 @@ const HeroSection = () => {
         }}
       ></div>
 
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-md z-0"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center max-w-2xl sm:max-w-3xl px-4 mx-auto">
-        <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif uppercase font-semibold tracking-wide leading-snug text-white drop-shadow-lg transition-all duration-500 ease-in-out"
-          style={{ fontFamily: "Unbounded" }}
-        >
-          Experience True
-          <br />
+        <h1 className="text-center">
           <span
-            className={`inline-block transition-opacity duration-500 ${
+            className="text-base sm:text-lg md:text-xl text-white font-light uppercase tracking-widest block mb-2"
+            style={{ fontFamily: "Unbounded" }}
+          >
+            Experience True
+          </span>
+          <span
+            className={`inline-block transition-opacity text-4xl sm:text-5xl md:text-6xl font-bold duration-500 ${
               fade ? "opacity-100" : "opacity-0"
             } text-yellow-400`}
+            style={{ fontFamily: "Unbounded" }}
           >
             {currentWord}
           </span>

@@ -3,25 +3,24 @@ import React from "react";
 const Parts = () => {
   const part = [
     {
-      image:
-        "https://img.freepik.com/premium-photo/automobile-steel-brake-disk-with-red-calipers-pads-isolated-white-background-street-racing-car-tuning-concept_104576-246.jpg?w=826",
-      name: "Brake Pad Set",
+      image: "/Spare_parts/clutch disk.png",
+      name: "Clutch Disc",
       description:
-        "High-performance brake pads suitable for most sedans and SUVs.",
-      brand: "AutoMaster",
+        "Essential component in manual transmissions, facilitating smooth power transfer between the engine.",
+      brand: "Valeo",
     },
     {
       image: "/Spare_parts/Steering.webp",
       name: "Steering Wheel",
       description:
-        "Ergonomically designed steering wheel for better handling and comfort.",
+        "Ergonomically designed steering wheel for better handling and comfort,Lightweight and stylish ",
       brand: "DrivePro",
     },
     {
-      image: "/Spare_parts/tyre.jpg",
-      name: "All-Terrain Tyre",
+      image: "/Spare_parts/Alloy.png",
+      name: "Alloy Wheel",
       description:
-        "Durable and high-grip tyre suitable for various off-road conditions.",
+        "Lightweight and stylish wheel designed for improved vehicle performance, heat dissipation, and corrosion resistance.",
       brand: "GripX",
     },
   ];
@@ -36,8 +35,6 @@ const Parts = () => {
           Explore top-tier components engineered for performance and durability.
         </p>
       </div>
-
-      {/* <hr className="text-gray-400 mb-8" /> */}
 
       <div className="flex mt-20 flex-wrap justify-center items-center gap-6">
         {part.map((item, index) => (

@@ -3,9 +3,6 @@
 @import "tailwindcss";
 body{
 font-family: "DM Sans", sans-serif;
+scroll-behavior: smooth;
 }
 
-
-.clip-bottom-wave {
-          clip-path: path("M0,0 L0,100% C200,90% 400,110% 720,95% C1100,80% 1300,100% 1440,90% L1440,0 Z");
-}
