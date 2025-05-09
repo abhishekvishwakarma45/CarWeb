@@ -6,7 +6,7 @@ const CallToAction = () => {
     <section className="py-32">
       <div className="container mx-auto px-6 lg:px-24">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800 tracking-tight">
             Your Next Car Awaits
           </h2>
           <p className="mt-4 text-lg md:text-xl text-gray-700">
@@ -33,7 +33,7 @@ const CallToAction = () => {
                 Browse thousands of top-rated vehicles. Affordable prices, fast
                 delivery.
               </p>
-              <button className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-blue-600 rounded-full">
+              <button className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-transparent border border-gray-300 rounded-full">
                 Browse Inventory <MdArrowOutward className="ml-3" />
               </button>
             </div>
@@ -56,7 +56,7 @@ const CallToAction = () => {
                 Sell your car in minutes and get instant offers. Simple, quick,
                 and secure.
               </p>
-              <button className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-green-600 rounded-full">
+              <button className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-transparent border border-gray-300 rounded-full">
                 Start Selling <MdArrowOutward className="ml-3" />
               </button>
             </div>

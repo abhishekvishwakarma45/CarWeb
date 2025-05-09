@@ -40,7 +40,7 @@ const WhyChooseSection = () => {
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800">
               Why Choose Our Dealership?
             </h2>
             <p className="mt-6 text-base sm:text-lg text-gray-600">

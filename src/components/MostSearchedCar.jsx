@@ -40,7 +40,7 @@ const MostSearchedCar = () => {
   return (
     <section className="w-full px-4 sm:px-6 lg:px-20 my-20 bg-white">
       <div className="text-center mb-10">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl capitalize font-semibold text-gray-800">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800">
           Explore the Most Searched Vehicles
         </h1>
 
