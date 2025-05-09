@@ -29,7 +29,7 @@ const HeroSection = () => {
   return (
     <section className="relative bg-black text-white font-sans">
       {/* Navbar */}
-      <nav className="relative z-20 flex items-center justify-between max-w-7xl mx-auto px-6 py-6">
+      {/* <nav className="relative z-20 flex items-center justify-between max-w-7xl mx-auto px-6 py-6">
         <div className="text-2xl font-bold tracking-wide uppercase text-white">
           LuxDrive
         </div>
@@ -43,7 +43,7 @@ const HeroSection = () => {
             </li>
           ))}
         </ul>
-      </nav>
+      </nav> */}
 
       <div className="relative h-screen w-full overflow-hidden">
         <div
