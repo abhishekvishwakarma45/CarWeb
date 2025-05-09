@@ -1,43 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import "tailwindcss";
 body{
 font-family: "DM Sans", sans-serif;
 }
-.testimonial-slider {
-          animation: scroll-left 20s linear infinite;
-}
 
-.testimonial-slider2 {
-          animation: scroll-right 20s linear infinite;
-}
-
-@keyframes scroll-left {
-          0% {
-                    transform: translateX(0%);
-          }
-
-          100% {
-                    transform: translateX(-50%);
-          }
-}
-
-@keyframes scroll-right {
-          0% {
-                    transform: translateX(-80%);
-          }
-
-          100% {
-                    transform: translateX(0%);
-          }
-}
-
-@media (max-width: 768px) {
-          .testimonial-slider {
-                    animation-duration: 10s;
-                    /* faster on mobile */
-          }
-
-          .testimonial-slider2 {
-                    animation-duration: 10s;
-          }
-}

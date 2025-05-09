@@ -10,17 +10,22 @@ import EmiCalculator from "./components/EMICalculator.jsx";
 import Review from "./components/Review.jsx";
 import Parts from "./components/SpareParts.jsx";
 import BrowseByType from "./components/BrowseByType.jsx";
-import Sale from "./components/Sale.jsx";
+import CallToAction from "./components/CallToAction.jsx";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import HeroSection from "./components/HeroSection.jsx";
 
 function App() {
   return (
     <Fragment>
-      {/* <Sale /> */}
+      <HeroSection />
       <BrowseByType />
       <MostSearchedCar />
       <ExploreBrands />
-      <WhyChooseSection />
+      <CallToAction />
       <Review />
+      <WhyChooseSection />
       <Parts />
       <Footer />
     </Fragment>
