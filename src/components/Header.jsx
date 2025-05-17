@@ -4,7 +4,7 @@ import { VscAccount } from "react-icons/vsc";
 
 const Header = () => {
   return (
-    <header className="w-full px-6 py-4 absolute z-40 top-0 text-white bg-black/30 backdrop-blur-md flex justify-between items-center transition duration-300">
+    <header className="w-full px-6 py-4 absolute z-40 top-0  bg-transparent text-black flex justify-between items-center transition duration-300">
       <div className="flex items-center">
         <img
           src="https://res.cloudinary.com/dqktbs8zx/image/upload/v1744024894/logo-removebg-preview_ctd0jf.png"
@@ -34,7 +34,7 @@ const Header = () => {
         </button>
       </nav>
 
-      <button className="md:hidden text-4xl text-white">
+      <button className="md:hidden text-3xl text-white">
         <RiMenu3Fill />
       </button>
     </header>

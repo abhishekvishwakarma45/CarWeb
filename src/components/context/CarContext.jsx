@@ -10,6 +10,7 @@ import { CarReducer as Reducer } from "../reducer/CarReducer";
 const carInitialState = {
   isLoading: false,
   carInventory: [],
+  singleCar: {},
 };
 
 const carContext = createContext();
@@ -33,14 +34,26 @@ const CarContextProvider = ({ children }) => {
     return [...new Set(values)];
   };
 
+  function getCarByID(id) {
+    dispatch({ type: "SET_LOADING" });
+    let car = state.carInventory.find((curr) => {
+      return String(curr.id) === id;
+    });
+    console.log("founded car" + car);
+    dispatch({ type: "STOP_LOADING" });
+    dispatch({ type: "SET_SINGLE_CAR", payload: car });
+  }
+
   return (
-    <carContext.Provider value={{ state, useCartContext, getUniqueValues }}>
+    <carContext.Provider
+      value={{ state, useCarContext, getUniqueValues, getCarByID }}
+    >
       {children}
     </carContext.Provider>
   );
 };
 
-export const useCartContext = () => {
+export const useCarContext = () => {
   return useContext(carContext);
 };
 

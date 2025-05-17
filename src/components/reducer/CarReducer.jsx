@@ -21,6 +21,12 @@ export const CarReducer = (state, action) => {
         carInventory: action.payload,
       };
     }
+    case "SET_SINGLE_CAR": {
+      return {
+        ...state,
+        singleCar: action.payload,
+      };
+    }
 
     default: {
       return state;

@@ -44,7 +44,7 @@ const reviews = [
 
 export default function Review() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 px-3 bg-white">
       <div className="px-4 mx-auto text-center max-w-7xl">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800">
           What Our Customers Are Saying

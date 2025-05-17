@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useCartContext } from "./context/CarContext";
+import { useCarContext } from "./context/CarContext";
 import CarTemplate from "./CarTemplate";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -9,7 +9,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const MostSearchedCar = () => {
   const [selectType, setSelectType] = useState();
-  const { state, getUniqueValues } = useCartContext();
+  const { state, getUniqueValues } = useCarContext();
   const { carInventory } = state;
   const typeValue = getUniqueValues("type");
 
@@ -38,7 +38,7 @@ const MostSearchedCar = () => {
   }, []);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-20 my-20 bg-white">
+    <section className="w-full py-2 px-4 sm:px-6 lg:px-20 my-20 bg-white">
       <div className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800">
           Top Searched Vehicles
@@ -71,7 +71,7 @@ const MostSearchedCar = () => {
           ))}
         </div>
       </div>
-      <hr className="text-gray-400" />
+      {/* <hr className="text-gray-400" /> */}
       <Swiper
         modules={[Navigation]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}

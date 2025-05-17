@@ -35,13 +35,13 @@ const HeroSection = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center max-w-2xl sm:max-w-3xl px-4 mx-auto">
         <h1 className="text-center">
           <span
-            className="text-base sm:text-lg md:text-xl text-white font-light uppercase tracking-widest block mb-2"
+            className="text-base sm:text-lg md:text-xl text-white font-light capitalize tracking-widest block mb-2"
             style={{ fontFamily: "Unbounded" }}
           >
             Experience True
           </span>
           <span
-            className={`inline-block transition-opacity text-4xl sm:text-5xl md:text-6xl font-bold duration-500 ${
+            className={`inline-block transition-opacity uppercase mt-4  text-4xl sm:text-5xl md:text-6xl font-bold duration-500 ${
               fade ? "opacity-100" : "opacity-0"
             } text-yellow-400`}
             style={{ fontFamily: "Unbounded" }}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { MdOutlineArrowOutward } from "react-icons/md";
 const Parts = () => {
   const part = [
     {
@@ -13,7 +13,7 @@ const Parts = () => {
       image: "/Spare_parts/Steering.webp",
       name: "Steering Wheel",
       description:
-        "Ergonomically designed steering wheel for better handling and comfort,Lightweight and stylish ",
+        "Ergonomically designed steering wheel for better handling and comfort, Lightweight and stylish.",
       brand: "DrivePro",
     },
     {
@@ -27,7 +27,7 @@ const Parts = () => {
 
   return (
     <section className="py-15 px-6 sm:px-6 lg:px-20 bg-white">
-      <div className="my-8 text-left md:text-center">
+      <div className="my-8 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-800">
           Premium Automotive Spare Parts
         </h1>
@@ -36,13 +36,13 @@ const Parts = () => {
         </p>
       </div>
 
-      <div className="flex mt-20 flex-wrap justify-center items-center gap-6">
+      <div className="flex mt-20 flex-wrap justify-center items-stretch gap-6">
         {part.map((item, index) => (
           <div
             key={index}
-            className="max-w-sm w-full bg-white overflow-hidden transition-shadow duration-300"
+            className="flex flex-col max-w-sm w-full bg-white overflow-hidden border rounded-lg border-gray-300 shadow-sm"
           >
-            <div className="relative border rounded-lg border-gray-300">
+            <div className="relative">
               <img
                 src={item.image}
                 alt={item.name}
@@ -53,17 +53,26 @@ const Parts = () => {
               </span>
             </div>
 
-            <div className="p-4">
+            <div className="flex flex-col flex-grow p-4">
               <h2 className="text-lg font-semibold text-gray-800">
                 {item.name}
               </h2>
-              <p className="text-sm text-gray-600 mt-2">{item.description}</p>
-              <button className="mt-4 w-full bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded hover:bg-blue-500 transition-colors">
+              <p className="text-sm text-gray-600 mt-2 flex-grow">
+                {item.description}
+              </p>
+              <button className="mt-4 bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded hover:bg-blue-500 transition-colors">
                 Add to Cart
               </button>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <button className=" text-indigo-800 text-lg font-medium py-2 px-6 flex justify-center items-center hover:text-gray-800">
+          View More
+          <MdOutlineArrowOutward className="ml-1 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </button>
       </div>
     </section>
   );
