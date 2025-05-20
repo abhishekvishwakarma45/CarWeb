@@ -34,10 +34,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center max-w-2xl sm:max-w-3xl px-4 mx-auto">
         <h1 className="text-center">
-          <span
-            className="text-base sm:text-lg md:text-xl text-white font-light capitalize tracking-widest block mb-2"
-            style={{ fontFamily: "Unbounded" }}
-          >
+          <span className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide leading-relaxed text-center block mb-2">
             Experience True
           </span>
           <span
@@ -72,18 +69,6 @@ const HeroSection = () => {
       </div>
 
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
-        {/* <svg
-          className="relative block w-full h-24"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#ffffff"
-            fillOpacity="1"
-            d="M0,32L80,53.3C160,75,320,117,480,149.3C640,181,800,203,960,181.3C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg> */}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#ffffff"

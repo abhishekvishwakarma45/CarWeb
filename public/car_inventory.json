@@ -63,7 +63,7 @@
     "colors": ["#1F1F1F", "#FFFFFF", "#C0C0C0", "#FF0000"],
     "images": [
       "https://res.cloudinary.com/dqktbs8zx/image/upload/v1746186900/hyundai_tucson_hybrid_2021_4k_5k_hd_cars_2_oydu7f.jpg",
-      "https://www.hyundaiusa.com/images/vehicles/2023/tucson/gallery/2023-Hyundai-Tucson-Blue-Front.jpg",
+      "https://res.cloudinary.com/dqktbs8zx/image/upload/v1746186900/hyundai_tucson_hybrid_2021_4k_5k_hd_cars_2_oydu7f.jpg",
       "https://www.hyundaiusa.com/images/vehicles/2023/tucson/gallery/2023-Hyundai-Tucson-Interior.jpg",
       "https://www.hyundaiusa.com/images/vehicles/2023/tucson/gallery/2023-Hyundai-Tucson-Side.jpg"
     ],

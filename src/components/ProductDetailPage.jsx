@@ -23,6 +23,15 @@ const ProductDetailPage = () => {
 
   const [mainImage, setMainImage] = useState(null);
 
+  const [fade, setFade] = useState(false);
+
+  const changeImage = (img) => {
+    setFade(true);
+    setTimeout(() => {
+      setMainImage(img);
+      setFade(false);
+    }, 250);
+  };
   useEffect(() => {
     if (id) {
       getCarByID(id);
@@ -78,7 +87,7 @@ const ProductDetailPage = () => {
   const { name: sellerName, location, contact, profilePic } = postedBy || {};
 
   return (
-    <section className="w-full mt-20 px-4 py-6 md:px-15 lg:px-25">
+    <section className="w-full mt-30 px-4 py-6 md:px-15 lg:px-25">
       <nav className="mb-4 text-sm text-gray-600">
         <ol className="flex list-reset">
           <li>
@@ -132,7 +141,7 @@ const ProductDetailPage = () => {
           />
         </div>
 
-        <div className="grid grid-cols-4 gap-3 p-4 overflow-x-auto lg:grid-cols-1 lg:overflow-y-auto">
+        <div className="grid grid-cols-4 gap-3 p-2 overflow-x-auto lg:grid-cols-1 lg:overflow-y-auto">
           {Array.isArray(images) &&
             images.map((img, idx) => (
               <img
@@ -141,7 +150,7 @@ const ProductDetailPage = () => {
                 draggable="false"
                 onClick={() => setMainImage(img)}
                 alt={`Thumbnail ${idx + 1}`}
-                className={`rounded-md object-cover p-2 cursor-pointer transition-all duration-300 w-full ${
+                className={`rounded-sm object-cover  cursor-pointer transition-all duration-300 w-full ${
                   mainImage === img
                     ? "ring-2 ring-blue-600"
                     : "hover:ring-2 hover:ring-blue-400"
@@ -151,7 +160,7 @@ const ProductDetailPage = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-x-6 my-14">
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-x-10 my-14">
         <div className="flex flex-col gap-6">
           <div className="bg-white rounded-lg">
             <h2 className="pb-3 mb-4 text-2xl font-semibold text-gray-900 border-b border-gray-400">
@@ -339,7 +348,7 @@ const ProductDetailPage = () => {
                   Related Cars
                 </h2>
                 <hr className="text-gray-400 mb-8" />
-                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2">
                   {shuffledCars.map((curr, idx) => (
                     <CarTemplate key={idx} curr={curr} />
                   ))}
