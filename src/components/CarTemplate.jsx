@@ -23,7 +23,7 @@ const CarTemplate = ({ curr }) => {
               {year}
             </span>
             <button
-              className="flex items-center justify-center w-8 h-8 rounded-full focus:outline-none"
+              className="flex items-center bg-white justify-center w-8 h-8 rounded-full focus:outline-none"
               aria-label="Tag"
             >
               <TfiTag className="text-xl text-black" />

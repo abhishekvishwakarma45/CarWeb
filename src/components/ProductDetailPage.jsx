@@ -15,7 +15,7 @@ import { TfiTag } from "react-icons/tfi";
 import { GoGitCompare } from "react-icons/go";
 import { useCarContext } from "./context/CarContext";
 import { useParams } from "react-router";
-
+import CarTemplate from "./CarTemplate";
 const ProductDetailPage = () => {
   const { id } = useParams();
   const { state, getCarByID } = useCarContext();
@@ -29,6 +29,17 @@ const ProductDetailPage = () => {
     }
   }, [id]);
 
+  const [relatedCars, setRelatedCar] = useState([]);
+
+  useEffect(() => {
+    if (Array.isArray(carInventory) && singleCar?.type) {
+      const filteredArr = carInventory.filter(
+        (car) => car.type === singleCar.type && car.id !== singleCar.id
+      );
+      setRelatedCar(filteredArr);
+    }
+  }, [carInventory, singleCar]);
+
   useEffect(() => {
     if (Array.isArray(singleCar?.images) && singleCar.images.length > 0) {
       setMainImage(singleCar.images[0]);
@@ -36,9 +47,14 @@ const ProductDetailPage = () => {
   }, [singleCar]);
 
   if (!singleCar) {
-    return <div className="text-center py-10">Loading car details...</div>;
+    return (
+      <div className="w-full h-[60vh] flex items-center justify-center text-lg text-gray-700">
+        Loading car details...
+      </div>
+    );
   }
 
+  console.log(relatedCars);
   const {
     brand,
     model,
@@ -66,7 +82,7 @@ const ProductDetailPage = () => {
       <nav className="mb-4 text-sm text-gray-600">
         <ol className="flex list-reset">
           <li>
-            <a href="/" className="text-blue-600 hover:underline">
+            <a href="/" className="text-blue-600 ">
               Home
             </a>
           </li>
@@ -74,7 +90,7 @@ const ProductDetailPage = () => {
             <span className="mx-2">/</span>
           </li>
           <li>
-            <a href="/cars" className="text-blue-600 hover:underline">
+            <a href="/cars" className="text-blue-600 ">
               Cars
             </a>
           </li>
@@ -125,7 +141,7 @@ const ProductDetailPage = () => {
                 draggable="false"
                 onClick={() => setMainImage(img)}
                 alt={`Thumbnail ${idx + 1}`}
-                className={`rounded-md object-cover cursor-pointer transition-all duration-300 w-full ${
+                className={`rounded-md object-cover p-2 cursor-pointer transition-all duration-300 w-full ${
                   mainImage === img
                     ? "ring-2 ring-blue-600"
                     : "hover:ring-2 hover:ring-blue-400"
@@ -222,8 +238,7 @@ const ProductDetailPage = () => {
           </div>
         </div>
 
-        {/* Sidebar */}
-        <aside className="flex flex-col space-y-8 bg-white p-6-full">
+        <aside className="flex flex-col mt-10 space-y-8 bg-white p-6-full">
           <div className="p-4 border border-gray-300 rounded-lg">
             <h2 className="mb-4 text-xl font-semibold text-gray-900">
               Car Pricing
@@ -311,9 +326,27 @@ const ProductDetailPage = () => {
           </div>
         </aside>
       </div>
+      <div>
+        {relatedCars.length > 0 &&
+          (() => {
+            const shuffledCars = [...relatedCars].sort(
+              () => 0.5 - Math.random()
+            );
 
-      <div className="h-auto w-full">
-        {/* Related cars section placeholder */}
+            return (
+              <div className="mt-14">
+                <h2 className="mb-4 text-2xl font-semibold text-gray-900">
+                  Related Cars
+                </h2>
+                <hr className="text-gray-400 mb-8" />
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-2">
+                  {shuffledCars.map((curr, idx) => (
+                    <CarTemplate key={idx} curr={curr} />
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
       </div>
     </section>
   );

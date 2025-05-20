@@ -9,6 +9,7 @@ import WhyChooseSection from "./WhyChooseSection";
 import Parts from "./SpareParts";
 import { Footer } from "./Footer";
 import HeroSection from "./HeroSection";
+// import { Login } from "./Login";
 const Home = () => {
   return (
     <Fragment>
@@ -20,6 +21,7 @@ const Home = () => {
       <Review />
       <WhyChooseSection />
       <Parts />
+      {/* <Login /> */}
     </Fragment>
   );
 };

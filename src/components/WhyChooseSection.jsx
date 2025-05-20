@@ -96,7 +96,9 @@ const WhyChooseSection = () => {
                   <h3 className="text-base sm:text-lg font-semibold text-gray-800">
                     {title}
                   </h3>
-                  <p className="mt-1 text-xs sm:text-sm ">{description}</p>
+                  <p className="mt-1 text-xs sm:text-sm  text-gray-600">
+                    {description}
+                  </p>
                 </div>
               </div>
             ))}
