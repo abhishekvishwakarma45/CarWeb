@@ -2,6 +2,7 @@ import React from "react";
 
 import { VscAccount } from "react-icons/vsc";
 import { TbMenu4 } from "react-icons/tb";
+import { NavLink } from "react-router";
 const Header = () => {
   return (
     <header className="w-full px-6 py-4 absolute z-40 top-0 bg-transparent text-black flex justify-between items-center transition duration-300">
@@ -26,9 +27,11 @@ const Header = () => {
         <span className="cursor-pointer text-amber-500 transition">
           Contact
         </span>
-        <button className="ml-4 px-5 py-2 flex justify-center items-center text-amber-500 rounded border border-amber-500 transition-all duration-300">
-          <VscAccount className="mx-2" /> Sign In
-        </button>
+        <NavLink to="/login">
+          <button className="ml-4 px-5 py-2 flex justify-center items-center text-amber-500 rounded border border-amber-500 transition-all duration-300">
+            <VscAccount className="mx-2" /> Sign In
+          </button>
+        </NavLink>
       </nav>
 
       <button className="md:hidden text-3xl text-white">

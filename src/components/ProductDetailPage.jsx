@@ -63,7 +63,6 @@ const ProductDetailPage = () => {
     );
   }
 
-  console.log(relatedCars);
   const {
     brand,
     model,

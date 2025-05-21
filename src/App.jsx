@@ -5,9 +5,8 @@ import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx";
 import ProductDetailPage from "./components/ProductDetailPage.jsx";
 import { Footer } from "./components/Footer.jsx";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import SignUpPage from "./components/SignUpPage.jsx";
+import { Login } from "./components/Login.jsx";
 
 function App() {
   return (
@@ -16,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/car/:id" element={<ProductDetailPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUpPage />} />
       </Routes>
       <Footer />
     </Router>
