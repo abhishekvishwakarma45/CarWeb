@@ -6,17 +6,9 @@ import { FaFacebookF, FaGithub } from "react-icons/fa";
 const SignUpPage = () => {
   return (
     <Fragment>
-      <div className="min-h-screen mt-10 flex items-center justify-center bg-gray-50 px-4 py-12">
-        <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-12 mx-auto">
-          <div className="flex justify-center">
-            <img
-              src="/signup.png"
-              alt="Signup Illustration"
-              className="max-w-full h-auto object-contain"
-            />
-          </div>
-
-          <div className="w-full bg-white p-8 sm:p-10 rounded-xl shadow-lg">
+      <div className="min-h-screen mt-10 flex items-center justify-center bg-gray-50 px-4 py-4">
+        <div className="w-full max-w-xl mx-auto">
+          <div className="bg-white p-6 sm:p-10 rounded-xl shadow-lg">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
               Create Your Account
             </h2>
@@ -25,7 +17,7 @@ const SignUpPage = () => {
               easily.
             </p>
 
-            <div className="flex justify-center gap-4 mb-6">
+            <div className="flex justify-center gap-3 mb-6 flex-wrap">
               <button className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition">
                 <FcGoogle className="text-lg" />
                 Google

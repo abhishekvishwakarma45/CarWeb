@@ -58,7 +58,7 @@ const ProductDetailPage = () => {
   if (!singleCar) {
     return (
       <div className="w-full h-[60vh] flex items-center justify-center text-lg text-gray-700">
-        Loading car details...
+        <span className="loader"></span>
       </div>
     );
   }
@@ -86,7 +86,7 @@ const ProductDetailPage = () => {
   const { name: sellerName, location, contact, profilePic } = postedBy || {};
 
   return (
-    <section className="w-full mt-30 px-4 py-6 md:px-15 lg:px-25">
+    <section className="w-full mt-20  px-4 py-6 md:px-15 lg:px-40">
       <nav className="mb-4 text-sm text-gray-600">
         <ol className="flex list-reset">
           <li>
@@ -130,13 +130,13 @@ const ProductDetailPage = () => {
         </span>
       </div>
 
-      <div className="flex flex-col lg:grid grid-cols-[80%_20%] gap-3 mt-10">
+      <div className="flex flex-col max-h-[70vh]  lg:grid grid-cols-[80%_20%] gap-3 mt-10">
         <div className="flex-1">
           <img
             draggable="false"
             src={mainImage}
             alt="Main Car"
-            className="object-cover w-full rounded-lg shadow-sm"
+            className="object-cover w-full rounded-lg max-h-[70vh]"
           />
         </div>
 

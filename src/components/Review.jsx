@@ -1,7 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const reviews = [
   {
@@ -56,13 +57,14 @@ export default function Review() {
 
       <div className="relative mt-16 w-full max-w-7xl mx-auto">
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
           spaceBetween={20}
           loop={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
+          pagination={{ clickable: true }}
           breakpoints={{
             1024: {
               slidesPerView: 4,
@@ -81,7 +83,7 @@ export default function Review() {
           {reviews.map((review, idx) => (
             <SwiperSlide
               key={idx}
-              className="bg-gradient-to-br from-[#f0f4ff] via-[#e8f3ff] to-[#e0edff] rounded-xl shadow-md p-6 text-left"
+              className="bg-gradient-to-br from-[#f0f4ff] mb-10 via-[#e8f3ff] to-[#e0edff] rounded-xl shadow-md p-6 text-left"
             >
               <div className="flex items-center justify-between pb-2 mb-4 border-b border-gray-200">
                 <div className="text-lg font-semibold text-gray-900">

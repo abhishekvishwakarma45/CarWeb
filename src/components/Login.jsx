@@ -7,7 +7,6 @@ export const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-12">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-        {/* Left: Illustration */}
         <div className="flex justify-center">
           <img
             src="/login.png"
@@ -16,7 +15,6 @@ export const Login = () => {
           />
         </div>
 
-        {/* Right: Login Form */}
         <div className="w-full bg-white p-8 sm:p-10 rounded-xl shadow-lg">
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
             Welcome Back

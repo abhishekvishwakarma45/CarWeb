@@ -1,8 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import "tailwindcss";
-body{
-font-family: "DM Sans", sans-serif;
-scroll-behavior: smooth;
+
+body {
+          font-family: "DM Sans", sans-serif;
+          scroll-behavior: smooth;
 }
 
+.loader {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #a474e3;
+          position: relative;
+}
+
+.loader:before,
+.loader:after {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          inset: 0;
+          background: #6F00FF;
+          transform: rotate(0deg) translate(30px);
+          animation: rotate 1s ease infinite;
+}
+
+.loader:after {
+          animation-delay: 0.5s
+}
+
+@keyframes rotate {
+          100% {
+                    transform: rotate(360deg) translate(30px)
+                  }        }

@@ -25,8 +25,7 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center scale-105 brightness-75 z-0"
         style={{
-          backgroundImage:
-            "url('/193375-3840x2160-desktop-4k-bugatti-background-photo.jpg')",
+          backgroundImage: "url('/herosection.jpg')",
         }}
       ></div>
 
@@ -34,13 +33,14 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center max-w-2xl sm:max-w-3xl px-4 mx-auto">
         <h1 className="text-center">
-          <span className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide leading-relaxed text-center block mb-2">
+          <span className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide leading-relaxed text-center block">
             Experience True
           </span>
           <span
             className={`inline-block transition-opacity uppercase mt-4  text-4xl sm:text-5xl md:text-6xl font-bold duration-500 ${
               fade ? "opacity-100" : "opacity-0"
-            } text-yellow-400`}
+            } bg-gradient-to-r from-green-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent
+`}
             style={{ fontFamily: "Unbounded" }}
           >
             {currentWord}

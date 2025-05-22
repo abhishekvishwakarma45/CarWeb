@@ -83,7 +83,7 @@ export const Footer = () => {
         <div className="py-2">
           <div className="bg-white p-8 sm:p-10 rounded-lg text-center">
             <h3 className="text-2xl font-bold mb-2 text-indigo-700">
-              Stay Updated with AutoLux
+              Stay Updated with Shiftly
             </h3>
             <p className="text-sm text-gray-600 mb-6">
               Subscribe to our newsletter and never miss the latest offers,
