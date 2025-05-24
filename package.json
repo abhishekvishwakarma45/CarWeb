@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@photo-sphere-viewer/core": "^5.13.2",
+    "@tailwindcss/oxide": "^4.1.7",
     "@tailwindcss/vite": "^4.1.4",
     "axios": "^1.9.0",
     "car-web": "file:",
