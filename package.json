@@ -9,6 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@photo-sphere-viewer/core": "^5.13.2",
     "@tailwindcss/oxide": "^4.1.7",
