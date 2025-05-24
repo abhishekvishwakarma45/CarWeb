@@ -1,9 +1,12 @@
 import React from "react";
-
 import { VscAccount } from "react-icons/vsc";
 import { TbMenu4 } from "react-icons/tb";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
+import { useCarContext } from "./context/CarContext";
+
 const Header = () => {
+  const { UpdateSidebarValue } = useCarContext();
+
   return (
     <header className="w-full px-6 py-4 absolute z-40 top-0 bg-transparent text-black flex justify-between items-center transition duration-300">
       <div
@@ -15,6 +18,7 @@ const Header = () => {
         </h1>
       </div>
 
+      {/* Desktop Nav */}
       <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-widest">
         <span className="cursor-pointer text-amber-500 transition">Home</span>
         <span className="cursor-pointer text-amber-500 transition">
@@ -34,7 +38,11 @@ const Header = () => {
         </NavLink>
       </nav>
 
-      <button className="md:hidden text-3xl text-white">
+      <button
+        className="md:hidden text-3xl text-white"
+        onClick={() => UpdateSidebarValue(true)}
+        aria-label="Open sidebar"
+      >
         <TbMenu4 />
       </button>
     </header>

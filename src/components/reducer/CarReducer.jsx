@@ -28,6 +28,13 @@ export const CarReducer = (state, action) => {
       };
     }
 
+    case "UPDATE_SIDEBAR_VALUE": {
+      return {
+        ...state,
+        isSidebarOpen: action.payload,
+      };
+    }
+
     default: {
       return state;
     }

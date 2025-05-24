@@ -8,6 +8,7 @@ import { createContext } from "react";
 import { CarReducer as Reducer } from "../reducer/CarReducer";
 
 const carInitialState = {
+  isSidebarOpen: false,
   isLoading: false,
   carInventory: [],
   singleCar: {},
@@ -20,10 +21,10 @@ const CarContextProvider = ({ children }) => {
 
   useEffect(() => {
     const FetchCarData = async () => {
-      dispatch("SET_LOADING");
+      dispatch({ type: "SET_LOADING" });
       let Response = await axios.get("/car_inventory.json");
       let carData = await Response.data;
-      dispatch("STOP_LOADING");
+      dispatch({ type: "STOP_LOADING" });
       dispatch({ type: "SET_CAR_INVENTORY_DATA", payload: carData });
     };
     FetchCarData();
@@ -39,14 +40,23 @@ const CarContextProvider = ({ children }) => {
     let car = state.carInventory.find((curr) => {
       return String(curr.id) === id;
     });
-    console.log("founded car" + car);
+
     dispatch({ type: "STOP_LOADING" });
     dispatch({ type: "SET_SINGLE_CAR", payload: car });
   }
 
+  const UpdateSidebarValue = (value) => {
+    dispatch({ type: "UPDATE_SIDEBAR_VALUE", payload: value });
+  };
+
   return (
     <carContext.Provider
-      value={{ state, useCarContext, getUniqueValues, getCarByID }}
+      value={{
+        state,
+        getUniqueValues,
+        getCarByID,
+        UpdateSidebarValue,
+      }}
     >
       {children}
     </carContext.Provider>

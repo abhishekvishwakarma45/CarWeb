@@ -7,11 +7,12 @@ import ProductDetailPage from "./components/ProductDetailPage.jsx";
 import { Footer } from "./components/Footer.jsx";
 import SignUpPage from "./components/SignUpPage.jsx";
 import { Login } from "./components/Login.jsx";
-
+import Sidebar from "./components/Sidebar.jsx";
 function App() {
   return (
     <Router>
       <Header />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/car/:id" element={<ProductDetailPage />} />
